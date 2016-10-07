@@ -1,0 +1,254 @@
+#bloc_princ
+{
+	display: flex;
+	justify-content: space-between;
+}
+
+#presentation h1,
+#domaines h1
+{
+	text-align: center;
+	height: 40px;
+	padding-top: 20px;
+	padding-bottom: 10px;
+	font-size: 1.5em;
+	background: rgb(57, 120, 164);
+	border: 3px black solid;
+	border-radius: 7px;
+	color: white;
+
+}
+
+#para
+{
+	background: rgba(200, 200, 200, 0.9);
+	padding: 15px;
+	border: 3px black solid;
+	text-align: justify;
+	border-radius: 7px;
+	height: 700px;
+}
+
+#presentation
+{
+	padding-right: 25px;
+	width: 540px;
+}
+
+#domaines
+{
+	padding-left: 25px;
+	width: 540px;
+}
+
+#slideshow {
+	position: relative;
+	width: 970px;
+	height: 536px;
+	padding: 15px;
+	margin: 0 auto 2em;
+	border: 1px solid #ddd;
+	background: #FFF;
+	/* CSS3 effects */
+	background: linear-gradient(#FFF, #FFF 20%, #EEE 80%, #DDD);
+	border-radius: 2px 2px 2px 2px;
+	box-shadow: 0 0 3px rgba(0,0,0, 0.2);
+}
+
+#slideshow:before,
+#slideshow:after {
+	position: absolute;
+	bottom:17px;
+	z-index: -10;
+	width: 50%;
+	height: 20px;
+	content: " ";
+	background: rgba(0,0,0,0.1);
+	border-radius: 50%;
+	box-shadow: 0 0 20px rgba(0,0,0, 0.4), 0 20px 10px rgba(0,0,0, 0.7);
+}
+#slideshow:before {
+	left:0;
+	transform: rotate(-4deg);
+}
+#slideshow:after {
+	right:0;
+	transform: rotate(4deg);
+}
+
+/* gestion des dimensions et débordement du conteneur */
+#slideshow .container {
+	position:relative;
+	width: 970px;
+	height: 536px;
+	overflow: hidden;
+}
+	
+/* on prévoit un petit espace gris pour la timeline */
+#slideshow .container:after {
+	position:absolute;
+	bottom: 0; left:0;
+	content: " ";
+	width: 100%;
+	height: 2px;
+	background: #999;
+}
+
+#slideshow .slider {
+	position: absolute;
+	left:0; top:0;
+	width: 300%;
+	height: 536px;
+}
+
+/* annulation des marges sur figure */
+#slideshow figure {
+	position:relative;
+	display:inline-block;
+	padding:0; margin:0;
+}
+
+#slideshow figure:after {
+	position: absolute;
+	display:block;
+	content: " ";
+	top:0; left:0;
+	width: 100%; height: 100%;
+	box-shadow: 0 0 65px rgba(0,0,0, 0.5) inset;
+}
+
+#slideshow figcaption {
+	position:absolute;
+	left:0; right:0; bottom: 5px;
+	padding: 20px;
+	margin:0;
+	border-top: 1px solid rgb(225,225,225);
+	text-align:center;
+	letter-spacing: 0.05em;
+	word-spacing: 0.05em;
+	background: #fff;
+	background: rgba(255,255,255,0.7);
+	color: #555;
+	text-shadow: -1px -1px 0 rgba(255,255,255,0.3);
+	font-size: 1.5em;
+}
+
+@-webkit-keyframes slider {
+	0%, 28%, 100%	{ left: 0 }
+	33%, 62%		{ left: -100% }
+	67%, 95%		{ left: -200% }
+}
+
+@-moz-keyframes slider {
+	0%, 28%, 100%	{ left: 0 }
+	33%, 62%		{ left: -100% }
+	67%, 95%		{ left: -200% }
+}
+
+#slideshow .slider {
+	-webkit-animation-name:slider;
+	-webkit-animation-duration:24s;
+	-webkit-animation-iteration-count:infinite;
+	-moz-animation-name:slider;
+	-moz-animation-duration:24s;
+	-moz-animation-iteration-count:infinite;
+}
+
+#timeline {
+	position: absolute;
+	background: #999;
+	bottom: 15px;
+	left: 15px;
+	height: 2px;
+	background: rgb(25,154,7);
+	background: rgba(25,154,7,.8);
+	width: 0;
+	/* fonction d'animation */
+	-webkit-animation-name:timeliner;
+	-webkit-animation-duration:24s;
+	-webkit-animation-iteration-count:infinite;
+	-moz-animation-name:timeliner;
+	-moz-animation-duration:24s;
+	-moz-animation-iteration-count:infinite;
+}
+
+@-webkit-keyframes timeliner {
+	0%, 33%, 67%, 100%	{ width: 0;		}
+	28%, 62%, 90%		{ width: 970px;	}
+}
+
+@-moz-keyframes timeliner {
+	0%, 33%, 67%, 100%	{ width: 0;		}
+	28%, 62%, 90%		{ width: 970px;	}
+}
+
+@-webkit-keyframes figcaptionner {
+	0%, 33%, 67%, 100%						{ bottom: -65px;	}
+	5%, 28%, 38%, 62%, 72%, 95%		        { bottom: 5px;		}
+}
+
+@-moz-keyframes figcaptionner {
+	0%, 33%, 67%, 100%						{ bottom: -55px;	}
+	5%, 28%, 38%, 62%, 72%, 95%		        { bottom: 5px;		}
+}
+
+#slideshow figcaption {
+	-webkit-animation-name:figcaptionner;
+	-webkit-animation-duration:24s;
+	-webkit-animation-iteration-count:infinite;
+	-moz-animation-name:figcaptionner;
+	-moz-animation-duration:24s;
+	-moz-animation-iteration-count:infinite;
+}
+
+#logements h2,
+#tertiaire h2,
+#industriel h2
+{
+	text-align: center;
+}
+
+#bloc_2 h1
+{
+	text-align: center;
+	height: 40px;
+	padding-top: 20px;
+	padding-bottom: 10px;
+	font-size: 1.5em;
+	background: rgb(57, 120, 164);
+	border: 3px black solid;
+	border-radius: 7px;
+	color: white;
+}
+
+#agencement
+{
+	display: flex;
+	background: rgba(200, 200, 200, 0.9);
+	padding: 15px;
+	border: 3px black solid;
+	text-align: justify;
+	border-radius: 7px;
+}
+
+#logements,
+#tertiaire
+{
+	padding-right: 20px;
+}
+
+#underline
+{
+	
+	text-decoration: underline;
+}
+
+#tertiaire
+{
+	width: 500px;
+}
+
+#wrap
+{
+	position: relative;
+}

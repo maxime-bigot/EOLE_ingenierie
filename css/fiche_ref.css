@@ -1,0 +1,136 @@
+#photo
+{
+	width: 330px;
+	height: 156px;
+}
+
+#cadre
+{
+	position: relative;
+	border: 3px solid gray;
+	border-radius: 5px;
+	padding: 15px;
+	background: white;
+	margin-bottom: 30px;
+}
+
+#titre
+{
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	border: 2px gray solid;
+	padding: 20px;
+	background: rgb(200, 200, 200);
+}
+
+#nom
+{
+	text-align: center;
+	color: blue;
+	text-decoration: underline;
+}
+
+#description,
+#presentation
+{
+	display: flex;
+}
+
+#texte,
+#images
+{
+	width: 49.5%;
+	margin-top: 15px;
+}
+
+#texte
+{
+	border-right: 2px gray solid;
+}
+
+#pres_titre,
+#pres_def
+{
+	font-size: 1.2em;
+	width: 49%;
+}
+
+#pres_titre
+{
+	margin-right: 25px;
+	font-weight: bold;
+
+}
+
+#particularites ul li
+{
+	font-size: 1.2em;
+}
+
+#cadre_bleu,
+#cadre_vert
+{
+	border-radius: 4px;
+	border: 3px solid gray;
+	position: absolute;
+	width: 60px;
+	height: 60px;
+}
+
+#cadre_bleu
+{
+	top: -30px;
+	left: -30px;
+	background: blue;
+}
+
+#cadre_vert
+{
+	right: -30px;
+	bottom: -30px;
+	background: green;
+}
+
+#underline
+{
+	text-decoration: underline;
+}
+
+.bouton a {
+  display:block;
+  padding: 0;
+  width:154px;
+  line-height:68px;
+  text-align:center;
+  vertical-align:middle;
+  background:url('../images/bouton.png') no-repeat;
+  color:white;
+  text-decoration:none;
+  color: white;
+  font-size: 1.2em;
+}
+.bouton a:hover {
+  background:url('../images/hover.png') no-repeat;
+}
+
+#texte_bouton
+{
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+.bouton
+{
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+#images
+{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+}

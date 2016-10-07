@@ -1,0 +1,103 @@
+.e
+{
+	top: 80px;
+	left: 166px;
+	position: absolute;
+	width: 130px;
+}
+
+.f
+{
+	top: 225px;
+	left: 166px;
+	position: absolute;
+	width: 130px;
+}
+
+.g
+{
+	top: 152px;
+	left: 301px;
+	position: absolute;
+	width: 130px;
+}
+
+.h
+{
+	top: 317px;
+	left: 301px;
+	position: absolute;
+	width: 130px;
+}
+
+.i
+{
+	top: 80px;
+	left: 436px;
+	position: absolute;
+	width: 130px;
+}
+
+.j
+{
+	top: 379px;
+	left: 436px;
+	position: absolute;
+	width: 130px;
+}
+
+.k
+{
+	top: 8px;
+	left: 571px;
+	position: absolute;
+	width: 130px;
+}
+
+.l
+{
+	top: 230px;
+	left: 706px;
+	position: absolute;
+	width: 130px;
+}
+
+.m
+{
+	top: 8px;
+	left: 846px;
+	position: absolute;
+	width: 130px;
+}
+
+.n
+{
+	top: 317px;
+	left: 846px;
+	position: absolute;
+	width: 130px;
+}
+
+#texte
+{
+	color: white;
+	transition: color 0.5s, text-shadow 0.5s;
+
+}
+
+#texte:hover
+{
+	color: green;
+	text-shadow: 2px 2px 4px black;
+}
+
+#lien
+{
+	text-decoration: none;
+}
+
+#references
+{
+	position: relative;
+	text-align: center;
+}
